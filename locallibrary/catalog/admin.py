@@ -19,7 +19,7 @@ class AuthorInline(admin.TabularInline):
     model = Book
     extra = 0
 
-@admin.register(Author)
+@admin.register(Author) # Register
 class AuthorAdmin(admin.ModelAdmin):
     list_display = ('last_name', 'first_name', 'date_of_birth', 'date_of_death')
     fields = ['last_name', 'first_name', ('date_of_birth', 'date_of_death')]
